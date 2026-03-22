@@ -18,8 +18,8 @@ body{
     background-color: #FF5E3A;
     margin-top: 1vh;
     display: grid;
-    grid-template-columns: repeat(3,33.33%);
-    grid-template-rows: repeat(3,33.33%);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     border-radius: 5%;
 }
 
@@ -88,4 +88,31 @@ body{
 }
 .hide{
     display: none;
+}
+
+@media (max-width: 768px) {
+    .Box {
+        height: clamp(70px, 22vw, 140px);
+        width: clamp(75px, 23vw, 150px);
+        margin: 0.35rem;
+        font-size: clamp(26px, 7vw, 50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .Box {
+        height: clamp(60px, 26vw, 100px);
+        width: clamp(65px, 27vw, 110px);
+        margin: 0.25rem;
+        font-size: clamp(22px, 8vw, 40px);
+    }
+
+    .Top-bar {
+        height: 44px;
+    }
+
+    #reset {
+        height: 30px;
+        width: 60px;
+    }
 }
